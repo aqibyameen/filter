@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+    <style>
+        button{
+            background-color: black;
+            color: antiquewhite;
+            border: 0.5pc solid black;
+            border-radius: 10px;
+        }
+        body{
+            background-color: bisque;
+        }
+        .card-body{
+  background-color: rgb(250, 246, 246);
+  border-radius: 10px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+body{
+  background-color:azure;
+  color: rgb(12, 12, 12);
+}
+.card-title {
+  color: #262626;
+  font-size: 1.5em;
+  line-height: normal;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+@media (max-width: 767.98px) {
+  .card {
+    max-width: 100%;
+    margin: 12px auto;
+  }
+}
+
+.small-desc {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #452c2c;
+}
+
+.small-desc {
+  font-size: 1em;
+}
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, #6293c8, #384c6c);
+  border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.card {
+  display: block;
+  position: relative;
+  max-width: 300px;
+  max-height: 320px;
+  background-color: #f2f8f9;
+  border-radius: 10px;
+  padding: 2em 1.2em;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #c3e6ec, #a7d1d9);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: linear-gradient(135deg, #364a60, #384c6c);
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.35s ease-out;
+}
+
+.card:hover:before {
+  transform: scale(28);
+}
+
+.card:hover .small-desc {
+  transition: all 0.5s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card:hover .card-title {
+  transition: all 0.5s ease-out;
+  color: #ffffff;
+}
+
+    </style>
+    <div class="d-flex justify-content-center gap-4 m-5">
+    <button onclick="filterfunction(this)" >Electronics</button>
+    <button onclick="filterfunction(this)">Home Appliances</button>
+    <button onclick="filterfunction(this)">Stationery</button>
+    <button onclick="filterfunction(this)">Furniture</button>
+    <button onclick="filterfunction(this)">Fitness</button>
+    <button onclick="filterfunction(this)">Kitchen Appliances</button>
+    <button onclick="filterfunction(this)">Footwear</button>
+    <button onclick="filterAll()">ALL products</button>
+</div>
+    <div class="div d-flex flex-wrap gap-3"></div>
+     <script src="index.js"></script>
+</body>
+</html>
